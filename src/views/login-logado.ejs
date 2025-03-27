@@ -1,0 +1,23 @@
+<%- include('includes/head') %>
+<%- include('includes/nav') %>
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-2"></div>
+
+        <div class="col-lg-8 my-3">
+            <h1 class="text-center">Olá <%= user.email %> </h1>
+            <% if(user) { %>
+                <p class="text-center lead">Você precisa sair para criar outra conta <a class="nav-link" href="/login/logout">Sair</a> </p>
+            <% } %>
+    
+            
+            <%- include('includes/messages') %>
+
+        </div>
+
+        <div class="col-lg-2"></div>
+    </div>
+</div>
+
+<%- include('includes/footer') %>
