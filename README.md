@@ -10,5 +10,5 @@ Projeto feito para praticar o uso de frontend e backend com JavaScript e Node.js
 ### Ainda falta
 - Aprimorar a estilização e responsividade
 
-### 🎯 Objetivo
+### Objetivo
 Aplicar os conteúdos vistos em um projeto prático completo, utilizando tecnologias do ecossistema JavaScript.
