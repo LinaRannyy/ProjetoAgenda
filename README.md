@@ -12,3 +12,11 @@ Projeto feito para praticar o uso de frontend e backend com JavaScript e Node.js
 
 ### Objetivo
 Aplicar os conteúdos vistos em um projeto prático completo, utilizando tecnologias do ecossistema JavaScript.
+
+### Tecnologias
+- Node.js
+- Express
+- MongoDB
+- Bootstrap
+- EJS
+
