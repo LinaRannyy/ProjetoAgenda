@@ -2,13 +2,13 @@
 
 Projeto feito para praticar o uso de frontend e backend com JavaScript e Node.js, com foco maior no backend.
 
-## Funcionalidades
+### Funcionalidades
 - Cadastro e login de usuários
 - Registro, edição e exclusão de contatos
 - Interface simples com Bootstrap
 
-## Ainda falta
+### Ainda falta
 - Aprimorar a estilização e responsividade
 
-## 🎯 Objetivo
+### 🎯 Objetivo
 Aplicar os conteúdos vistos em um projeto prático completo, utilizando tecnologias do ecossistema JavaScript.
