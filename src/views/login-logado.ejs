@@ -2,21 +2,23 @@
 <%- include('includes/nav') %>
 
 <div class="container">
-    <div class="row">
-        <div class="col-lg-2"></div>
-
-        <div class="col-lg-8 my-3">
-            <h1 class="text-center">Olá <%= user.email %> </h1>
-            <% if(user) { %>
-                <p class="text-center lead">Você precisa sair para criar outra conta <a class="nav-link" href="/login/logout">Sair</a> </p>
-            <% } %>
-    
-            
-            <%- include('includes/messages') %>
-
+    <div class="row justify-content-center">
+        <div class="col-lg-8 my-5">
+            <div class="card">
+                <div class="card-body p-4 p-md-5">
+                    <h1 class="text-center mb-4">Olá <%= user.email %></h1>
+                    
+                    <div class="p-4 p-md-5 text-center" style="background-color: var(--background-color); border-radius: var(--border-radius);">
+                        <% if(user) { %>
+                            <p class="lead mb-4 text-muted">Você precisa sair para criar outra conta</p>
+                            <a href="/login/logout" class="btn btn-primary">Sair</a>
+                        <% } %>
+                    </div>
+                    
+                    <%- include('includes/messages') %>
+                </div>
+            </div>
         </div>
-
-        <div class="col-lg-2"></div>
     </div>
 </div>
 
