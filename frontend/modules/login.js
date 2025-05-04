@@ -1,4 +1,4 @@
-export default class Login {
+class Login {
     constructor(formClass) {
         this.form = document.querySelector(formClass) 
     }
@@ -15,3 +15,5 @@ export default class Login {
         })
     }
 }
+
+module.exports = Login;
