@@ -33,15 +33,30 @@ const sessionOptions = session({
 app.use(express.static(path.join(__dirname, 'public')));
 // app.use('/frontend', express.static(path.join(__dirname, 'frontend')));
 app.use(express.static(path.join(__dirname, 'frontend')));
-app.use('modules', express.static(path.join(__dirname, 'frontend', 'modules'))); // Pasta modules
+app.use('/modules', express.static(path.join(__dirname, 'frontend', 'modules'))); // Pasta modules
 app.set('views', path.resolve(__dirname, 'src', 'views'));
 app.set('view engine', 'ejs');
-
 app.use(sessionOptions);
 app.use(flash());
 app.use(middleGlobal)
 app.use(routes)
 
+// Error handling middleware
+app.use((err, req, res, next) => {
+    console.error(err.stack);
+    res.status(500).render('error', { 
+        message: 'Something went wrong!',
+        error: process.env.NODE_ENV === 'development' ? err : {}
+    });
+});
+
+// 404 handler
+app.use((req, res) => {
+    res.status(404).render('error', { 
+        message: 'Page not found',
+        error: {}
+    });
+});
 
 app.on('ok', () => {
     app.listen(port, () => {
