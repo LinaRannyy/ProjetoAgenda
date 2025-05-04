@@ -1,4 +1,4 @@
-const Login = require('./modules/login');
+import Login from "./modules/login"
 
 const login = new Login('.form-login')
 const cadastro = new Login('.form-cadastro')
